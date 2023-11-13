@@ -14,7 +14,7 @@ namespace OnlineTicariOtomasyon.Models.Siniflar
         public string PersonelSoyadı { get; set;}
         public string PersonelGorsel {  get; set; }
         public SatisHareket SatisHareket { get; set; }  
-
+        public Departman Departman { get; set; }
 
     }
 }

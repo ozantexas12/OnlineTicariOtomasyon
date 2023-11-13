@@ -11,6 +11,6 @@ namespace OnlineTicariOtomasyon.Models.Siniflar
         [Key]
         public int DepartmanID {  get; set; }
         public string DepartmanAdı { get; set; }
-
+        public ICollection<Personel>Personels { get; set; }
     }
 }
