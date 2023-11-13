@@ -13,6 +13,7 @@ namespace OnlineTicariOtomasyon.Models.Siniflar
         public string PersonelAdı {  get; set; }
         public string PersonelSoyadı { get; set;}
         public string PersonelGorsel {  get; set; }
+        public SatisHareket SatisHareket { get; set; }  
 
 
     }

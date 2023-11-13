@@ -14,5 +14,6 @@ namespace OnlineTicariOtomasyon.Models.Siniflar
         public string CarilerSoyadı { get; set; }
         public string CarilerSehir {  get; set; }
         public string CarilerMail { get; set; }
+        public SatisHareket SatisHareket { get; set; }
     }
 }

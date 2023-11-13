@@ -18,5 +18,6 @@ namespace OnlineTicariOtomasyon.Models.Siniflar
         public bool UrunDurum {  get; set;}
         public string UrunGorsel {  get; set;}
         public Kategori Kategori { get; set;}
+        public SatisHareket SatisHareket { get; set; }
     }
 }
