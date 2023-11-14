@@ -27,6 +27,6 @@ namespace OnlineTicariOtomasyon.Models.Siniflar
         [Column(TypeName = "Varchar")]
         [StringLength(50)]
         public string CarilerMail { get; set; }
-        public SatisHareket SatisHareket { get; set; }
+        public ICollection<SatisHareket> SatisHarekets { get; set; }
     }
 }
