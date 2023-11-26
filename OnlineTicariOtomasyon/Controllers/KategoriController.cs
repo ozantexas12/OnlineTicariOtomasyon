@@ -13,7 +13,7 @@ namespace OnlineTicariOtomasyon.Controllers
         Context c = new Context();
         public ActionResult Index()
         {
-            var degerler=c.Kategoris.ToList();
+            var degerler = c.Kategoris.ToList();
             return View(degerler);
         }
         [HttpGet]
@@ -30,17 +30,17 @@ namespace OnlineTicariOtomasyon.Controllers
         }
         public ActionResult KategoriSil(int id)
         {
-            var ktg=c.Kategoris.Find(id);
+            var ktg = c.Kategoris.Find(id);
             c.Kategoris.Remove(ktg);
             c.SaveChanges();
             return RedirectToAction("Index");
         }
         public ActionResult KategoriGetir(int id)
         {
-            var kategori=c.Kategoris.Find(id);
-            return View("KategoriGetir",kategori);
+            var kategori = c.Kategoris.Find(id);
+            return View("KategoriGetir", kategori);
         }
-        public ActionResult KategoriGuncelle(Kategori k) 
+        public ActionResult KategoriGuncelle(Kategori k)
         {
             var ktgr = c.Kategoris.Find(k.KategoriID);
             ktgr.KategoriAd = k.KategoriAd;

@@ -52,16 +52,16 @@ namespace OnlineTicariOtomasyon.Controllers
         }
         public ActionResult DepartmanDetay(int id)
         {
-            var degerler=c.Personels.Where(x=>x.DepartmanId==id).ToList();
+            var degerler = c.Personels.Where(x => x.DepartmanId == id).ToList();
             var dpt = c.Departmans.Where(x => x.DepartmanID == id).Select(y => y.DepartmanAdı).FirstOrDefault();
-            ViewBag.d=dpt;
+            ViewBag.d = dpt;
             return View(degerler);
         }
         public ActionResult DepartmanPersonelSatis(int id)
         {
-            var degerler=c.SatisHarekets.Where(x=>x.PersonelId==id).ToList();
-            var per=c.Personels.Where(x=>x.PersonelID==id).Select(y=>y.PersonelAdı +""+ y.PersonelSoyadı).FirstOrDefault();  
-            ViewBag.dpers=per;
+            var degerler = c.SatisHarekets.Where(x => x.PersonelId == id).ToList();
+            var per = c.Personels.Where(x => x.PersonelID == id).Select(y => y.PersonelAdı + "" + y.PersonelSoyadı).FirstOrDefault();
+            ViewBag.dpers = per;
             return View(degerler);
         }
     }

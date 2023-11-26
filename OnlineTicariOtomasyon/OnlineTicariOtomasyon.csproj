@@ -215,6 +215,9 @@
     <Content Include="Web\src\assets\demo\datatables-demo.js" />
     <Content Include="Web\src\assets\img\error-404-monochrome.svg" />
     <Content Include="Web\src\js\scripts.js" />
+    <Content Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -302,6 +305,7 @@
     <Content Include="Views\Cari\MusteriSatis.cshtml" />
     <Content Include="Views\Personel\Index.cshtml" />
     <Content Include="Views\Personel\PersonelEkle.cshtml" />
+    <Content Include="Views\Personel\PersonelGetir.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
