@@ -17,18 +17,18 @@
         <th>Detaylar</th>
     </tr>
     @foreach (var x in Model)
-            {
-                <tr>
-                    <td>@x.CarilerID</td>
-                    <td>@x.CarilerAdı</td>
-                    <td>@x.CarilerSoyadı</td>
-                    <td>@x.CarilerSehir</td>
-                    <td>@x.CarilerMail</td>
-                    <td><a href="~/Cari/CariSil/@x.CarilerID" class="btn btn-danger">Sil</a></td>
-                    <td><a href="/Cari/CariGetir/@x.CarilerID" class="btn btn-success">Güncelle</a></td>
-                    <td><a href="/Cari/MusteriSatis/@x.CarilerID" class="btn btn-default" style="background-color:lightcoral">Satış Geçmişi</a></td>
-                </tr>
-            }
+    {
+        <tr>
+            <td>@x.CarilerID</td>
+            <td>@x.CarilerAdı</td>
+            <td>@x.CarilerSoyadı</td>
+            <td>@x.CarilerSehir</td>
+            <td>@x.CarilerMail</td>
+            <td><a href="~/Cari/CariSil/@x.CarilerID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Cari/CariGetir/@x.CarilerID" class="btn btn-success">Güncelle</a></td>
+            <td><a href="/Cari/MusteriSatis/@x.CarilerID" class="btn btn-default" style="background-color:lightcoral">Satış Geçmişi</a></td>
+        </tr>
+    }
 
 </table>
 <a href="/Cari/YeniCari/" class="btn btn-info">Yeni Cari Ekle</a>
