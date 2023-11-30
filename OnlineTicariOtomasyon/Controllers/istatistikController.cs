@@ -7,7 +7,7 @@ using OnlineTicariOtomasyon.Models.Siniflar;
 
 namespace OnlineTicariOtomasyon.Controllers
 {
-    public class İstatistikController : Controller
+    public class istatistikController : Controller
     {
         // GET: İstatistik
         Context c = new Context();
