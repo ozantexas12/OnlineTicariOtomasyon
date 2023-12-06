@@ -2434,6 +2434,7 @@
     <Content Include="image\buzdolabı-beko_1.png" />
     <Content Include="image\Laptop.png" />
     <Content Include="image\Mobilya.png" />
+    <Content Include="image\Ocak.jpg" />
     <Content Include="image\su-ısıtıcısı.png" />
     <Content Include="image\Çamaşır Makinesi.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
