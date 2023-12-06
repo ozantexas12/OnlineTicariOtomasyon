@@ -45,9 +45,52 @@ namespace OnlineTicariOtomasyon.Controllers
             DateTime bugun = DateTime.Today;
             var dgr15 = c.SatisHarekets.Count(x => x.Tarih == bugun).ToString();
             ViewBag.d15 = dgr15;
-            var dgr16 = c.SatisHarekets.Where(x => x.Tarih == bugun).Sum(y => y.ToplamTutar).ToString();
-            ViewBag.d16 = dgr16;
+            //var dgr16 = c.SatisHarekets.Where(x => x.Tarih == bugun).Sum(y => y.ToplamTutar).ToString();
+            //ViewBag.d16 = dgr16;
             return View();
+        }
+        public ActionResult KolayTablolar()
+        {
+            var sorgu = from x in c.Carilers
+                        group x by x.CarilerSehir into g
+                        select new SinifGroup
+                        {
+                            Sehir = g.Key,
+                            Sayi = g.Count()
+                        };
+            return View(sorgu.ToList());
+        }
+        public PartialViewResult Partial1()
+        {
+            var sorgu2 = from x in c.Personels
+                         group x by x.Departman.DepartmanAdı into g
+                         select new SinifGrup2
+                         {
+                             Departman = g.Key,
+                             Sayi = g.Count()
+                         };
+            return PartialView(sorgu2.ToList());
+        }
+        public PartialViewResult Partial2()
+        {
+            var sorgu = c.Carilers.ToList();
+            return PartialView(sorgu);
+        }
+        public PartialViewResult Partial3()
+        {
+            var sorgu = c.Uruns.ToList();
+            return PartialView(sorgu);
+        }
+        public PartialViewResult Partial4()
+        {
+            var sorgu4 = from x in c.Uruns
+                         group x by x.UrunMarka into g
+                         select new Marka
+                         {
+                             marka = g.Key,
+                             sayi = g.Count()
+                         };
+            return PartialView(sorgu4.ToList());
         }
     }
 }
