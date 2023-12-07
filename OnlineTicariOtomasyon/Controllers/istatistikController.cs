@@ -45,8 +45,9 @@ namespace OnlineTicariOtomasyon.Controllers
             DateTime bugun = DateTime.Today;
             var dgr15 = c.SatisHarekets.Count(x => x.Tarih == bugun).ToString();
             ViewBag.d15 = dgr15;
-            //var dgr16 = c.SatisHarekets.Where(x => x.Tarih == bugun).Sum(y => y.ToplamTutar).ToString();
-            //ViewBag.d16 = dgr16;
+
+            var dgr16 = c.SatisHarekets.Where(x => x.Tarih == bugun).Sum(y => y.ToplamTutar).ToString();
+            ViewBag.d16 = dgr16;
             return View();
         }
         public ActionResult KolayTablolar()
