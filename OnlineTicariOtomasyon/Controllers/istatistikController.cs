@@ -43,11 +43,15 @@ namespace OnlineTicariOtomasyon.Controllers
             ViewBag.d14 = dgr14;
 
             DateTime bugun = DateTime.Today;
-            var dgr15 = c.SatisHarekets.Count(x => x.Tarih == bugun).ToString();
-            ViewBag.d15 = dgr15;
+            var bugunkuSatislar = c.SatisHarekets.Where(x => x.Tarih == bugun);
 
-            var dgr16 = c.SatisHarekets.Where(x => x.Tarih == bugun).Sum(y => y.ToplamTutar).ToString();
-            ViewBag.d16 = dgr16;
+            // Bugünkü satışların sayısını kontrol et
+            int satisAdeti = bugunkuSatislar.Count();
+            ViewBag.d15 = satisAdeti.ToString();
+
+            // Eğer bugün satış yapılmışsa ToplamTutar'ı topla, aksi halde 0 olarak ata
+            decimal bugunkuToplamTutar = satisAdeti > 0 ? bugunkuSatislar.Sum(y => y.ToplamTutar) : 0;
+            ViewBag.d16 = bugunkuToplamTutar.ToString();
             return View();
         }
         public ActionResult KolayTablolar()
