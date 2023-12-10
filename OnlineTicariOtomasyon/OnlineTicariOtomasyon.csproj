@@ -150,7 +150,7 @@
     <Compile Include="Models\Siniflar\SinifGroup.cs" />
     <Compile Include="Models\Siniflar\SinifGrup2.cs" />
     <Compile Include="Models\Siniflar\Urun.cs" />
-    <Compile Include="Models\Siniflar\Yapılacaklar.cs" />
+    <Compile Include="Models\Siniflar\Yapilacaklar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -2429,6 +2429,11 @@
     <Content Include="Content\DataTables\images\sort_desc.png" />
     <Content Include="Content\DataTables\images\sort_desc_disabled.png" />
     <Content Include="Content\DataTables\swf\flashExport.swf" />
+    <Content Include="Dist\PersonelGorsel\person_1.jpg" />
+    <Content Include="Dist\PersonelGorsel\person_2.jpg" />
+    <Content Include="Dist\PersonelGorsel\person_3.jpg" />
+    <Content Include="Dist\PersonelGorsel\person_4.jpg" />
+    <Content Include="Dist\PersonelGorsel\person_5.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -3011,7 +3016,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Dist\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
