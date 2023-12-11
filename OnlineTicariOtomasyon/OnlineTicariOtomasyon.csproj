@@ -124,6 +124,7 @@
     <Compile Include="Controllers\GaleriController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KategoriController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PersonelController.cs" />
     <Compile Include="Controllers\SatisController.cs" />
     <Compile Include="Controllers\UrunController.cs" />
@@ -332,6 +333,15 @@
     <Content Include="Dist\PersonelGorsel\person_3.jpg" />
     <Content Include="Dist\PersonelGorsel\person_4.jpg" />
     <Content Include="Dist\PersonelGorsel\person_5.jpg" />
+    <Content Include="Dist\weblogin\css\font-awesome.css" />
+    <Content Include="Dist\weblogin\css\popup-box.css" />
+    <Content Include="Dist\weblogin\css\style.css" />
+    <Content Include="Dist\weblogin\fonts\fontawesome-webfont.svg" />
+    <Content Include="Dist\weblogin\images\bg.jpg" />
+    <Content Include="Dist\weblogin\index.html" />
+    <Content Include="Dist\weblogin\js\jquery-2.1.4.min.js" />
+    <Content Include="Dist\weblogin\js\jquery.magnific-popup.js" />
+    <Content Include="Dist\weblogin\w3layouts-License.txt" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -424,6 +434,11 @@
     <Content Include="Scripts\DataTables\responsive.jqueryui.min.js" />
     <Content Include="Scripts\DataTables\responsive.semanticui.js" />
     <Content Include="Scripts\DataTables\responsive.semanticui.min.js" />
+    <Content Include="Dist\weblogin\fonts\fontawesome-webfont.eot" />
+    <Content Include="Dist\weblogin\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Dist\weblogin\fonts\fontawesome-webfont.woff" />
+    <Content Include="Dist\weblogin\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Dist\weblogin\fonts\FontAwesome.otf" />
     <None Include="Scripts\jquery-3.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.1.js" />
     <Content Include="Scripts\jquery-3.7.1.min.js" />
@@ -577,6 +592,7 @@
     <Content Include="Views\istatistik\Partial4.cshtml" />
     <Content Include="Views\Personel\PersonelListe.cshtml" />
     <Content Include="Views\YapilacakListesi\Index.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
