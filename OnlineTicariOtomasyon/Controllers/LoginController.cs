@@ -1,4 +1,4 @@
-﻿
+﻿using OnlineTicariOtomasyon.Models.Siniflar;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,12 +10,21 @@ namespace OnlineTicariOtomasyon.Controllers
     public class LoginController : Controller
     {
         // GET: Login
+        Context c = new Context();
         public ActionResult Index()
         {
             return View();
         }
-       public PartialViewResult Partial1()
+        [HttpGet]
+        public PartialViewResult Partial1()
         {
+            return PartialView();
+        }
+        [HttpPost]
+        public PartialViewResult Partial1(Cariler k)
+        {
+            c.Carilers.Add(k);
+            c.SaveChanges();
             return PartialView();
         }
     }
