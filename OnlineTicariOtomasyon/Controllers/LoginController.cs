@@ -1,6 +1,7 @@
 ﻿using OnlineTicariOtomasyon.Models.Siniflar;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Validation;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -21,7 +22,7 @@ namespace OnlineTicariOtomasyon.Controllers
             return PartialView();
         }
         [HttpPost]
-        public PartialViewResult Partial1(Cariler k)
+        public ActionResult Partial1(Cariler k)
         {
             c.Carilers.Add(k);
             c.SaveChanges();

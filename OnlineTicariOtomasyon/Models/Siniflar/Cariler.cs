@@ -12,19 +12,20 @@ namespace OnlineTicariOtomasyon.Models.Siniflar
         [Key]
         public int CarilerID { get; set; }
 
+        [Display(Name = "Cariler Adı")]
         [Column(TypeName = "Varchar")]
         [StringLength(30,ErrorMessage ="En Fazla 30 Karakter Yazabilirsiniz")]
         public string CarilerAdı { get; set; }
-
+        [Display(Name = "Cariler Soyadı")]
         [Column(TypeName = "Varchar")]
         [StringLength(30)]
         [Required(ErrorMessage ="Bu alanı Boş Geçmeyiniz!")]
         public string CarilerSoyadı { get; set; }
-
+        [Display(Name = "Cariler Şehir")]
         [Column(TypeName = "Varchar")]
         [StringLength(13)]
         public string CarilerSehir {  get; set; }
-
+        [Display(Name = "Cariler Mail")]
         [Column(TypeName = "Varchar")]
         [StringLength(50)]
         public string CarilerMail { get; set; }
