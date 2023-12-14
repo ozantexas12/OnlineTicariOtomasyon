@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
+using System.Xml.Linq;
 
 namespace OnlineTicariOtomasyon.Models.Siniflar
 {
@@ -27,7 +28,7 @@ namespace OnlineTicariOtomasyon.Models.Siniflar
         [StringLength(250)]
         public string PersonelGorsel { get; set; }
         public ICollection<SatisHareket> SatisHarekets { get; set; }
-        
+        [Display(Name = "Departman Id")]
         public int DepartmanId {  get; set; }
         public virtual Departman Departman { get; set; }
 
