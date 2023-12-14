@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 using OnlineTicariOtomasyon.Models.Siniflar;
 
 namespace OnlineTicariOtomasyon.Controllers
@@ -26,6 +27,26 @@ namespace OnlineTicariOtomasyon.Controllers
             c.Carilers.Add(p);
             c.SaveChanges();
             return PartialView();
+        }
+        [HttpGet]
+        public ActionResult CariLogin1()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult CariLogin1(Cariler ca)
+        {
+            var bilgiler = c.Carilers.FirstOrDefault(x => x.CarilerMail == ca.CarilerMail && x.CarilerSifre == ca.CarilerSifre);
+            if (bilgiler != null)
+            {
+                FormsAuthentication.SetAuthCookie(bilgiler.CarilerMail, false);
+                Session["CarilerMail"] = bilgiler.CarilerMail.ToString();
+                return RedirectToAction("Index","CariPanel");
+            }
+            else
+            {
+                return RedirectToAction("Index","Login");
+            }
         }
     }
 }
