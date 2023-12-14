@@ -328,6 +328,7 @@
     <Content Include="Content\DataTables\images\sort_desc.png" />
     <Content Include="Content\DataTables\images\sort_desc_disabled.png" />
     <Content Include="Content\DataTables\swf\flashExport.swf" />
+    <Content Include="Dist\index.html" />
     <Content Include="Dist\PersonelGorsel\person_1.jpg" />
     <Content Include="Dist\PersonelGorsel\person_2.jpg" />
     <Content Include="Dist\PersonelGorsel\person_3.jpg" />
@@ -626,6 +627,7 @@
     <Content Include="Views\Personel\PersonelListe.cshtml" />
     <Content Include="Views\YapilacakListesi\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Login\Partial2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
