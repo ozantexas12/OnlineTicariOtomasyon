@@ -6,9 +6,9 @@
 <br />
 <h2>Online Ticari Otomasyon Cari Bilgileri</h2>
 
-@using (Html.BeginForm("Index2", "CariPanel1", FormMethod.Post))
+@using (Html.BeginForm("Index", "CariPanel1", FormMethod.Post))
 {
-    <table class="table table-bordered">
+    <table class="table table-hover">
         <tr>
             <td>
                 <label>Mail Adresi:@HttpContext.Current.User.Identity.Name</label>
@@ -16,12 +16,7 @@
         </tr>
         <tr>
             <td>
-                @Html.TextBoxFor(x => x.CarilerAdı, new { @class = "form-control" })
-            </td>
-        </tr>
-        <tr>
-            <td>
-                @Html.TextBoxFor(x => x.CarilerSoyadı, new { @class = "form-control" })
+               @Html.TextBoxFor(x=>x.CarilerAdı, new {@class="form-control"})
             </td>
         </tr>
     </table>

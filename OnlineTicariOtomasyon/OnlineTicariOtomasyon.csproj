@@ -150,6 +150,7 @@
     <Compile Include="Models\Siniflar\Personel.cs" />
     <Compile Include="Models\Siniflar\SatisHareket.cs" />
     <Compile Include="Models\Siniflar\SinifGroup.cs" />
+    <Compile Include="Models\Siniflar\SinifGroup3.cs" />
     <Compile Include="Models\Siniflar\SinifGrup2.cs" />
     <Compile Include="Models\Siniflar\Urun.cs" />
     <Compile Include="Models\Siniflar\Yapilacaklar.cs" />
@@ -631,6 +632,8 @@
     <Content Include="Views\Login\Partial2.cshtml" />
     <Content Include="Views\Shared\_CariLayout.cshtml" />
     <Content Include="Views\CariPanel\Index.cshtml" />
+    <Content Include="Views\CariPanel\Siparislerim.cshtml" />
+    <Content Include="Views\istatistik\Partial3.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

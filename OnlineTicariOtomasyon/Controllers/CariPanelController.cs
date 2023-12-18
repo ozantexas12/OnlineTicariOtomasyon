@@ -19,5 +19,12 @@ namespace OnlineTicariOtomasyon.Controllers
             ViewBag.m = mail;  
             return View();
         }
+        public ActionResult Siparislerim()
+        {
+            var mail = (string)Session["CarilerMail"];
+            var id=c.Carilers.Where(X=>X.CarilerMail == mail.ToString()).Select(y=>y.CarilerID).FirstOrDefault();
+            var degerler=c.SatisHarekets.Where(x=>x.CarilerId==id).ToList();
+            return View(degerler);
+        }
     }
 }
