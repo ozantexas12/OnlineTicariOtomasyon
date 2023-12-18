@@ -70,3 +70,7 @@ C:\Users\ozan\source\repos\OnlineTicariOtomasyon\OnlineTicariOtomasyon\bin\rosly
 C:\Users\ozan\source\repos\OnlineTicariOtomasyon\OnlineTicariOtomasyon\bin\roslyn\System.Memory.dll
 C:\Users\ozan\source\repos\OnlineTicariOtomasyon\OnlineTicariOtomasyon\bin\roslyn\System.Numerics.Vectors.dll
 C:\Users\ozan\source\repos\OnlineTicariOtomasyon\OnlineTicariOtomasyon\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\ozan\source\repos\OnlineTicariOtomasyon\OnlineTicariOtomasyon\bin\PagedList.dll
+C:\Users\ozan\source\repos\OnlineTicariOtomasyon\OnlineTicariOtomasyon\bin\PagedList.Mvc.dll
+C:\Users\ozan\source\repos\OnlineTicariOtomasyon\OnlineTicariOtomasyon\bin\PagedList.xml
+C:\Users\ozan\source\repos\OnlineTicariOtomasyon\OnlineTicariOtomasyon\bin\PagedList.Mvc.xml

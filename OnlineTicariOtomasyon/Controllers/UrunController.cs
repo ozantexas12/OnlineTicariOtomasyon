@@ -10,10 +10,14 @@ namespace OnlineTicariOtomasyon.Controllers
     {
         // GET: Urun
         Context c = new Context();
-        public ActionResult Index()
+        public ActionResult Index(string p)
         {
-            var urunler = c.Uruns.Where(x => x.UrunDurum == true).ToList();
-            return View(urunler);
+            var urunler = from x in c.Uruns select x;
+            if (!string.IsNullOrEmpty(p))
+            {
+                urunler = urunler.Where(y => y.UrunAdı.Contains(p));
+            }
+            return View(urunler.ToList());
         }
         [HttpGet]
         public ActionResult YeniUrun()
@@ -70,7 +74,7 @@ namespace OnlineTicariOtomasyon.Controllers
         }
         public ActionResult UrunListesi()
         {
-            var degerler=c.Uruns.ToList();
+            var degerler = c.Uruns.ToList();
             return View(degerler);
         }
     }

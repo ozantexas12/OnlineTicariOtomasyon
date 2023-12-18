@@ -41,11 +41,31 @@ namespace OnlineTicariOtomasyon.Controllers
             {
                 FormsAuthentication.SetAuthCookie(bilgiler.CarilerMail, false);
                 Session["CarilerMail"] = bilgiler.CarilerMail.ToString();
-                return RedirectToAction("Index","CariPanel");
+                return RedirectToAction("Index", "CariPanel");
             }
             else
             {
-                return RedirectToAction("Index","Login");
+                return RedirectToAction("Index", "Login");
+            }
+        }
+        [HttpGet]
+        public ActionResult AdminLogin()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AdminLogin(Admin a)
+        {
+            var bilgiler = c.Admins.FirstOrDefault(x => x.KullaniciAdi == a.KullaniciAdi && x.Sifre == a.Sifre);
+            if (bilgiler != null) 
+            { 
+                FormsAuthentication.SetAuthCookie(bilgiler.KullaniciAdi, false);
+                Session["KullaniciAdi"]=bilgiler.KullaniciAdi.ToString();
+                return RedirectToAction("Index","Kategori");
+            }
+            else
+            {
+                return RedirectToAction("Index", "Login");
             }
         }
     }
