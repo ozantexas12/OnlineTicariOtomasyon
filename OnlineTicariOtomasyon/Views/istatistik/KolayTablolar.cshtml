@@ -8,47 +8,35 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | Simple Tables</title>
+    <title></title>
 
-    <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="/Dist/plugins/fontawesome-free/css/all.min.css">
-    <!-- Theme style -->
     <link rel="stylesheet" href="/Dist/dist/css/adminlte.min.css">
 </head>
 <body class="hold-transition sidebar-mini">
     <div class="wrapper">
-        <!-- Navbar -->
-        <!-- Content Header (Page header) -->
         <section class="content-header">
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
                         <h1>Hızlı Bakış Tabloları</h1>
-                    </div><!-- /.container-fluid -->
+                    </div>
                 </div>
             </div>
         </section>
-
-        <!-- Main content -->
         <section class="content">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-6">
                         @Html.Action("Partial3", "istatistik")
-                        <!-- /.card -->
                         @Html.Action("Partial1", "istatistik")
-
-                        <!-- /.card -->
                     </div>
-                    <!-- /.col -->
                     <div class="col-md-6">
                         <div class="card">
                             <div class="card-header">
                                 <h3 class="card-title">Müşteri Şehir Tablosu</h3>
                             </div>
-                            <!-- /.card-header -->
                             <div class="card-body p-0">
                                 <table class="table table-striped">
                                     <thead>
@@ -105,31 +93,17 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <!-- /.card-body -->
                         </div>
-                        <!-- /.card -->
                         @Html.Action("Partial4", "istatistik")
-                        <!-- /.card -->
                     </div>
-                    <!-- /.col -->
                 </div>
-                <!-- /.row -->
-                <!-- /.row -->
-                <!-- /.row -->
-            </div><!-- /.container-fluid -->
+            </div>
         </section>
-        <!-- /.content -->
     </div>
-    <!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">
-        <!-- Control sidebar content goes here -->
     </aside>
-    <!-- /.control-sidebar -->
-    <!-- jQuery -->
     <script src="/Dist/plugins/jquery/jquery.min.js"></script>
-    <!-- Bootstrap 4 -->
     <script src="/Dist/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- AdminLTE App -->
     <script src="/Dist/dist/js/adminlte.min.js"></script>
 </body>
 </html>
