@@ -1,4 +1,4 @@
-﻿    using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -22,21 +22,21 @@ namespace OnlineTicariOtomasyon.Controllers
             List<SelectListItem> deger1 = (from x in c.Uruns.ToList()
                                            select new SelectListItem
                                            {
-                                               Text = x.UrunAdı,
+                                               Text = x.UrunAdi,
                                                Value = x.UrunId.ToString()
                                            }).ToList();
 
             List<SelectListItem> deger2 = (from x in c.Carilers.ToList()
                                            select new SelectListItem
                                            {
-                                               Text = x.CarilerAdı + " " + x.CarilerSoyadı,
+                                               Text = x.CarilerAdi + " " + x.CarilerSoyadi,
                                                Value = x.CarilerID.ToString()
                                            }).ToList();
 
             List<SelectListItem> deger3 = (from x in c.Personels.ToList()
                                            select new SelectListItem
                                            {
-                                               Text = x.PersonelAdı + " " + x.PersonelSoyadı,
+                                               Text = x.PersonelAdi + " " + x.PersonelSoyadi,
                                                Value = x.PersonelID.ToString()
                                            }).ToList();
 
@@ -58,21 +58,21 @@ namespace OnlineTicariOtomasyon.Controllers
             List<SelectListItem> deger1 = (from x in c.Uruns.ToList()
                                            select new SelectListItem
                                            {
-                                               Text = x.UrunAdı,
+                                               Text = x.UrunAdi,
                                                Value = x.UrunId.ToString()
                                            }).ToList();
 
             List<SelectListItem> deger2 = (from x in c.Carilers.ToList()
                                            select new SelectListItem
                                            {
-                                               Text = x.CarilerAdı + " " + x.CarilerSoyadı,
+                                               Text = x.CarilerAdi + " " + x.CarilerSoyadı,
                                                Value = x.CarilerID.ToString()
                                            }).ToList();
 
             List<SelectListItem> deger3 = (from x in c.Personels.ToList()
                                            select new SelectListItem
                                            {
-                                               Text = x.PersonelAdı + " " + x.PersonelSoyadı,
+                                               Text = x.PersonelAdı + " " + x.PersonelSoyadi,
                                                Value = x.PersonelID.ToString()
                                            }).ToList();
 
@@ -97,7 +97,7 @@ namespace OnlineTicariOtomasyon.Controllers
         }
         public ActionResult SatisDetay(int id)
         {
-            var degerler=c.SatisHarekets.Where(x=>x.SatisID==id).ToList();
+            var degerler = c.SatisHarekets.Where(x => x.SatisID == id).ToList();
             return View(degerler);
         }
     }

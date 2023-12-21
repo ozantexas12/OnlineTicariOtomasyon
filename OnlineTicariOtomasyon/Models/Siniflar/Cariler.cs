@@ -15,12 +15,12 @@ namespace OnlineTicariOtomasyon.Models.Siniflar
         [Display(Name = "Cariler Adı")]
         [Column(TypeName = "Varchar")]
         [StringLength(30,ErrorMessage ="En Fazla 30 Karakter Yazabilirsiniz")]
-        public string CarilerAdı { get; set; }
+        public string CarilerAdi { get; set; }
         [Display(Name = "Cariler Soyadı")]
         [Column(TypeName = "Varchar")]
         [StringLength(30)]
         [Required(ErrorMessage ="Bu alanı Boş Geçmeyiniz!")]
-        public string CarilerSoyadı { get; set; }
+        public string CarilerSoyadi { get; set; }
         [Display(Name = "Cariler Şehir")]
         [Column(TypeName = "Varchar")]
         [StringLength(13)]

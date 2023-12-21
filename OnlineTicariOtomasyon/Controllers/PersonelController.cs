@@ -23,7 +23,7 @@ namespace OnlineTicariOtomasyon.Controllers
             List<SelectListItem> deger2 = (from x in c.Departmans.ToList()
                                            select new SelectListItem
                                            {
-                                               Text = x.DepartmanAdı,
+                                               Text = x.DepartmanAdi,
                                                Value = x.DepartmanID.ToString()
                                            }).ToList();
             ViewBag.dgr2 = deger2;
@@ -49,7 +49,7 @@ namespace OnlineTicariOtomasyon.Controllers
             List<SelectListItem> deger1 = (from x in c.Departmans.ToList()
                                            select new SelectListItem
                                            {
-                                               Text = x.DepartmanAdı,
+                                               Text = x.DepartmanAdi,
                                                Value = x.DepartmanID.ToString()
                                            }).ToList();
             ViewBag.dgr1 = deger1;
@@ -60,7 +60,7 @@ namespace OnlineTicariOtomasyon.Controllers
         {
             var prsn = c.Personels.Find(p.PersonelID);
             prsn.PersonelAdı = p.PersonelAdı;
-            prsn.PersonelSoyadı = p.PersonelSoyadı;
+            prsn.PersonelSoyadi = p.PersonelSoyadi;
             prsn.PersonelGorsel = p.PersonelGorsel;
             prsn.DepartmanId = p.DepartmanId;
             c.SaveChanges();

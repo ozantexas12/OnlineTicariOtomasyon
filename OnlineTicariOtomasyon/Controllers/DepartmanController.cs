@@ -46,21 +46,21 @@ namespace OnlineTicariOtomasyon.Controllers
         public ActionResult DepartmanGuncelle(Departman p)
         {
             var dept = c.Departmans.Find(p.DepartmanID);
-            dept.DepartmanAdı = p.DepartmanAdı;
+            dept.DepartmanAdi = p.DepartmanAdi;
             c.SaveChanges();
             return RedirectToAction("Index");
         }
         public ActionResult DepartmanDetay(int id)
         {
             var degerler = c.Personels.Where(x => x.DepartmanId == id).ToList();
-            var dpt = c.Departmans.Where(x => x.DepartmanID == id).Select(y => y.DepartmanAdı).FirstOrDefault();
+            var dpt = c.Departmans.Where(x => x.DepartmanID == id).Select(y => y.DepartmanAdi).FirstOrDefault();
             ViewBag.d = dpt;
             return View(degerler);
         }
         public ActionResult DepartmanPersonelSatis(int id)
         {
             var degerler = c.SatisHarekets.Where(x => x.PersonelId == id).ToList();
-            var per = c.Personels.Where(x => x.PersonelID == id).Select(y => y.PersonelAdı + "" + y.PersonelSoyadı).FirstOrDefault();
+            var per = c.Personels.Where(x => x.PersonelID == id).Select(y => y.PersonelAdı + "" + y.PersonelSoyadi).FirstOrDefault();
             ViewBag.dpers = per;
             return View(degerler);
         }

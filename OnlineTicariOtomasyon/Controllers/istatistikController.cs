@@ -27,17 +27,17 @@ namespace OnlineTicariOtomasyon.Controllers
             ViewBag.d6 = dgr6;
             var dgr7 = c.Uruns.Count(x => x.UrunStok <= 20).ToString();
             ViewBag.d7 = dgr7;
-            var dgr8 = (from x in c.Uruns orderby x.SatisFiyat descending select x.UrunAdı).FirstOrDefault();
+            var dgr8 = (from x in c.Uruns orderby x.SatisFiyat descending select x.UrunAdi).FirstOrDefault();
             ViewBag.d8 = dgr8;
-            var dgr9 = (from x in c.Uruns orderby x.SatisFiyat ascending select x.UrunAdı).FirstOrDefault();
+            var dgr9 = (from x in c.Uruns orderby x.SatisFiyat ascending select x.UrunAdi).FirstOrDefault();
             ViewBag.d9 = dgr9;
             var dgr10 = c.Uruns.GroupBy(x => x.UrunMarka).OrderByDescending(z => z.Count()).Select(y => y.Key).FirstOrDefault();
             ViewBag.d10 = dgr10;
-            var dgr11 = c.Uruns.Count(x => x.UrunAdı == "Buzdolabı").ToString();
+            var dgr11 = c.Uruns.Count(x => x.UrunAdi == "Buzdolabı").ToString();
             ViewBag.d11 = dgr11;
-            var dgr12 = c.Uruns.Count(x => x.UrunAdı == "Laptop").ToString();
+            var dgr12 = c.Uruns.Count(x => x.UrunAdi == "Laptop").ToString();
             ViewBag.d12 = dgr12;
-            var dgr13 = c.Uruns.Where(u => u.UrunId == (c.SatisHarekets.GroupBy(x => x.UrunId).OrderByDescending(z => z.Count()).Select(y => y.Key).FirstOrDefault())).Select(k => k.UrunAdı).FirstOrDefault();
+            var dgr13 = c.Uruns.Where(u => u.UrunId == (c.SatisHarekets.GroupBy(x => x.UrunId).OrderByDescending(z => z.Count()).Select(y => y.Key).FirstOrDefault())).Select(k => k.UrunAdi).FirstOrDefault();
             ViewBag.d13 = dgr13;
             var dgr14 = c.SatisHarekets.Sum(x => x.ToplamTutar).ToString();
             ViewBag.d14 = dgr14;
@@ -68,7 +68,7 @@ namespace OnlineTicariOtomasyon.Controllers
         public PartialViewResult Partial1()
         {
             var sorgu2 = from x in c.Personels
-                         group x by x.Departman.DepartmanAdı into g
+                         group x by x.Departman.DepartmanAdi into g
                          select new SinifGrup2
                          {
                              Departman = g.Key,
