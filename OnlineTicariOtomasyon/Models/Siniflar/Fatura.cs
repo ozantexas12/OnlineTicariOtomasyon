@@ -18,7 +18,7 @@ namespace OnlineTicariOtomasyon.Models.Siniflar
 
         [Column(TypeName = "Varchar")]
         [StringLength(6)]
-        public string FaturaSıraNo {  get; set; }
+        public string FaturaSiraNo {  get; set; }
         public DateTime FaturaTarihi { get; set; }
 
         [Column(TypeName = "Varchar")]

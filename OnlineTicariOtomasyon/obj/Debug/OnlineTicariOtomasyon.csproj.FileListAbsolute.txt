@@ -74,3 +74,5 @@ C:\Users\ozan\source\repos\OnlineTicariOtomasyon\OnlineTicariOtomasyon\bin\Paged
 C:\Users\ozan\source\repos\OnlineTicariOtomasyon\OnlineTicariOtomasyon\bin\PagedList.Mvc.dll
 C:\Users\ozan\source\repos\OnlineTicariOtomasyon\OnlineTicariOtomasyon\bin\PagedList.xml
 C:\Users\ozan\source\repos\OnlineTicariOtomasyon\OnlineTicariOtomasyon\bin\PagedList.Mvc.xml
+C:\Users\ozan\source\repos\OnlineTicariOtomasyon\OnlineTicariOtomasyon\obj\Debug\OnlineTicariOtomasyon.Migrations.denemekargo.resources
+C:\Users\ozan\source\repos\OnlineTicariOtomasyon\OnlineTicariOtomasyon\obj\Debug\OnlineTicariOtomasyon.csproj.GenerateResource.cache

@@ -59,7 +59,7 @@ namespace OnlineTicariOtomasyon.Controllers
         public ActionResult PersonelGuncelle(Personel p)
         {
             var prsn = c.Personels.Find(p.PersonelID);
-            prsn.PersonelAdı = p.PersonelAdı;
+            prsn.PersonelAdi = p.PersonelAdi;
             prsn.PersonelSoyadi = p.PersonelSoyadi;
             prsn.PersonelGorsel = p.PersonelGorsel;
             prsn.DepartmanId = p.DepartmanId;

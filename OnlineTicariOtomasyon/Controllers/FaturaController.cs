@@ -37,7 +37,7 @@ namespace OnlineTicariOtomasyon.Controllers
         {
             var fatura = c.Faturas.Find(f.FaturaID);
             fatura.FaturaSeriNo = f.FaturaSeriNo;
-            fatura.FaturaSıraNo = f.FaturaSıraNo;
+            fatura.FaturaSiraNo = f.FaturaSiraNo;
             fatura.FaturaTarihi = f.FaturaTarihi;
             fatura.VergiDairesi = f.VergiDairesi;
             fatura.Saat = f.Saat;

@@ -20,5 +20,7 @@ namespace OnlineTicariOtomasyon.Models.Siniflar
         public DbSet<Personel>Personels { get; set; }
         public DbSet<Detay>Detays { get; set; }
         public DbSet<Yapilacaklar>Yapılacaklars { get; set; }
+        public DbSet<KargoDetay>KargoDetays { get; set; }
+        public DbSet<KargoTakip>KargoTakips { get; set; }
     }
 }

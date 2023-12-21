@@ -60,7 +60,7 @@ namespace OnlineTicariOtomasyon.Controllers
         public ActionResult DepartmanPersonelSatis(int id)
         {
             var degerler = c.SatisHarekets.Where(x => x.PersonelId == id).ToList();
-            var per = c.Personels.Where(x => x.PersonelID == id).Select(y => y.PersonelAdı + "" + y.PersonelSoyadi).FirstOrDefault();
+            var per = c.Personels.Where(x => x.PersonelID == id).Select(y => y.PersonelAdi + "" + y.PersonelSoyadi).FirstOrDefault();
             ViewBag.dpers = per;
             return View(degerler);
         }

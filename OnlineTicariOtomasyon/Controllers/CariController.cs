@@ -48,8 +48,8 @@ namespace OnlineTicariOtomasyon.Controllers
                 return View("CariGetir");
             }
             var cari = c.Carilers.Find(p.CarilerID);
-            cari.CarilerAdı = p.CarilerAdı;
-            cari.CarilerSoyadı = p.CarilerSoyadı;
+            cari.CarilerAdi = p.CarilerAdi;
+            cari.CarilerSoyadi = p.CarilerSoyadi;
             cari.CarilerSehir = p.CarilerSehir;
             cari.CarilerMail = p.CarilerMail;
             c.SaveChanges();
@@ -58,7 +58,7 @@ namespace OnlineTicariOtomasyon.Controllers
         public ActionResult MusteriSatis(int id)
         {
             var degerler = c.SatisHarekets.Where(x => x.CarilerId == id).ToList();
-            var cr = c.Carilers.Where(x => x.CarilerID == id).Select(y => y.CarilerAdı + " " + y.CarilerSoyadı).FirstOrDefault();
+            var cr = c.Carilers.Where(x => x.CarilerID == id).Select(y => y.CarilerAdi + " " + y.CarilerSoyadi).FirstOrDefault();
             ViewBag.cari = cr;
             return View(degerler);
         }

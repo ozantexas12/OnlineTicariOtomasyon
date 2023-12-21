@@ -14,7 +14,7 @@ namespace OnlineTicariOtomasyon.Models.Siniflar
         [Display(Name = ";Ürün Adı")]
         [Column(TypeName = "Varchar")]
         [StringLength(30)]
-        public string UrunAdı { get; set; }
+        public string UrunAdi { get; set; }
         [Display(Name = "Ürün Marka")]
         public string UrunMarka { get; set; }
         [Display(Name = "Ürün Stok")]

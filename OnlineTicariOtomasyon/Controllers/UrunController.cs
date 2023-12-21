@@ -15,7 +15,7 @@ namespace OnlineTicariOtomasyon.Controllers
             var urunler = from x in c.Uruns select x;
             if (!string.IsNullOrEmpty(p))
             {
-                urunler = urunler.Where(y => y.UrunAdı.Contains(p));
+                urunler = urunler.Where(y => y.UrunAdi.Contains(p));
             }
             return View(urunler.ToList());
         }
@@ -67,7 +67,7 @@ namespace OnlineTicariOtomasyon.Controllers
             urn.KategoriId = p.KategoriId;
             urn.UrunMarka = p.UrunMarka;
             urn.UrunStok = p.UrunStok;
-            urn.UrunAdı = p.UrunAdı;
+            urn.UrunAdi = p.UrunAdi;
             urn.UrunGorsel = p.UrunGorsel;
             c.SaveChanges();
             return RedirectToAction("Index");
@@ -83,7 +83,7 @@ namespace OnlineTicariOtomasyon.Controllers
             List<SelectListItem> deger3 = (from x in c.Personels.ToList()
                                            select new SelectListItem
                                            {
-                                               Text = x.PersonelAdı + " " + x.PersonelSoyadi,
+                                               Text = x.PersonelAdi + " " + x.PersonelSoyadi,
                                                Value = x.PersonelID.ToString()
                                            }).ToList();
             ViewBag.dgr3 = deger3;
