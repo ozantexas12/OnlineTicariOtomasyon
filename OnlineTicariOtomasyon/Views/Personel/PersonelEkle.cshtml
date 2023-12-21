@@ -9,11 +9,11 @@
 @using (Html.BeginForm("PersonelEkle", "Personel", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     <form class="form-group" method="post">
-        @Html.LabelFor(x => x.PersonelAdı)
-        @Html.TextBoxFor(x => x.PersonelAdı, new { @class = "form-control" })
+        @Html.LabelFor(x => x.PersonelAdi)
+        @Html.TextBoxFor(x => x.PersonelAdi, new { @class = "form-control" })
         <br />
-        @Html.LabelFor(x => x.PersonelSoyadı)
-        @Html.TextBoxFor(x => x.PersonelSoyadı, new { @class = "form-control" })
+        @Html.LabelFor(x => x.PersonelSoyadi)
+        @Html.TextBoxFor(x => x.PersonelSoyadi, new { @class = "form-control" })
         <br />
         @Html.LabelFor(x => x.PersonelGorsel)
         @*@Html.TextBoxFor(x => x.PersonelGorsel, new { @class = "form-control" })*@

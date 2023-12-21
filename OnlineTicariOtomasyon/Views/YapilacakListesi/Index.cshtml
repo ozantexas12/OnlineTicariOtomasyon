@@ -59,21 +59,16 @@
                                     @foreach (var x in Model)
                                     {
                                         <li>
-                                            <!-- drag handle -->
                                             <span class="handle">
                                                 <i class="fas fa-ellipsis-v"></i>
                                                 <i class="fas fa-ellipsis-v"></i>
                                             </span>
-                                            <!-- checkbox -->
                                             <div class="icheck-primary d-inline ml-2">
                                                 <input type="checkbox" value="" name="todo1" id="@("todoCheck"+ x.YapılacakİD)">
                                                 <label for="@("todoCheck"+ x.YapılacakİD)"></label>
                                             </div>
-                                            <!-- todo text -->
                                             <span class="text">@x.Baslik</span>
-                                            <!-- Emphasis label -->
                                             <small class="badge badge-danger"><i class="far fa-clock"></i></small>
-                                            <!-- General tools such as edit or delete-->
                                             <div class="tools">
                                                 <i class="fas fa-edit"></i>
                                                 <i class="fas fa-trash-o"></i>
@@ -82,31 +77,19 @@
                                     }
                                 </ul>
                             </div>
-                            <!-- /.card-body -->
                             <div class="card-footer clearfix">
                                 <button type="button" class="btn btn-primary float-right"><i class="fas fa-plus"></i> Yeni Yapılacak Notu Ekle</button>
                             </div>
                         </div>
-                        <!-- /.card -->
                     </section>
                 </div>
             </div>
         </section>
-        <!-- /.content -->
     </div>
-    <!-- /.content-wrapper -->
-    <!-- Control Sidebar -->
-    <!-- /.control-sidebar -->
-    <!-- ./wrapper -->
-    <!-- jQuery -->
     <script src="~/Dist/plugins/jquery/jquery.min.js"></script>
-    <!-- jQuery UI 1.11.4 -->
     <script src="~/Dist/plugins/jquery-ui/jquery-ui.min.js"></script>
-    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
     <script>$.widget.bridge('uibutton', $.ui.button)</script>
-    <!-- AdminLTE App -->
     <script src="~/Dist/dist/js/adminlte.js"></script>
-    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="~/Dist/dist/js/pages/dashboard.js"></script>
 </body>
 </html>

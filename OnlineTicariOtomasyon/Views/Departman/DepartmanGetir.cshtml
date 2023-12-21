@@ -10,8 +10,8 @@
 @using (Html.BeginForm("DepartmanGuncelle", "Departman", FormMethod.Post))
 {
     <div class="form-group">
-        @Html.LabelFor(x => x.DepartmanAdı)
-        @Html.TextBoxFor(x => x.DepartmanAdı, new { @class = "from-control" })
+        @Html.LabelFor(x => x.DepartmanAdi)
+        @Html.TextBoxFor(x => x.DepartmanAdi, new { @class = "from-control" })
         @Html.HiddenFor(x => x.DepartmanID)
     </div>
     <button class="btn btn-default" style="background-color:yellowgreen">Güncelle</button>

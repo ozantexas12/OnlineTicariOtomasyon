@@ -11,12 +11,12 @@
 {
     <div class="form-group">
         @Html.HiddenFor(x => x.PersonelID)
-        @Html.LabelFor(x => x.PersonelAdı)
-        @Html.TextBoxFor(x => x.PersonelAdı, new { @class = "form-control" })
+        @Html.LabelFor(x => x.PersonelAdi)
+        @Html.TextBoxFor(x => x.PersonelAdi, new { @class = "form-control" })
         <br />
-        @Html.LabelFor(x => x.PersonelSoyadı)
-        @Html.TextBoxFor(x => x.PersonelSoyadı, new { @class = "form-control" })
-        @Html.ValidationMessageFor(x => x.PersonelSoyadı, "", new { @style = "color:red" })
+        @Html.LabelFor(x => x.PersonelSoyadi)
+        @Html.TextBoxFor(x => x.PersonelSoyadi, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.PersonelSoyadi, "", new { @style = "color:red" })
         <br />
         @Html.LabelFor(x => x.PersonelGorsel)
         <input type="file" name="PersonelGorsel" />
