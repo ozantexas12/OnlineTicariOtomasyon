@@ -22,21 +22,21 @@ namespace OnlineTicariOtomasyon.Controllers
             List<SelectListItem> deger1 = (from x in c.Uruns.ToList()
                                            select new SelectListItem
                                            {
-                                               Text = x.UrunAdi,
+                                               Text = x.UrunAdı,
                                                Value = x.UrunId.ToString()
                                            }).ToList();
 
             List<SelectListItem> deger2 = (from x in c.Carilers.ToList()
                                            select new SelectListItem
                                            {
-                                               Text = x.CarilerAdi + " " + x.CarilerSoyadi,
+                                               Text = x.CarilerAdı + " " + x.CarilerSoyadı,
                                                Value = x.CarilerID.ToString()
                                            }).ToList();
 
             List<SelectListItem> deger3 = (from x in c.Personels.ToList()
                                            select new SelectListItem
                                            {
-                                               Text = x.PersonelAdi + " " + x.PersonelSoyadi,
+                                               Text = x.PersonelAdı + " " + x.PersonelSoyadı,
                                                Value = x.PersonelID.ToString()
                                            }).ToList();
 
@@ -58,7 +58,7 @@ namespace OnlineTicariOtomasyon.Controllers
             List<SelectListItem> deger1 = (from x in c.Uruns.ToList()
                                            select new SelectListItem
                                            {
-                                               Text = x.UrunAdi,
+                                               Text = x.UrunAdı,
                                                Value = x.UrunId.ToString()
                                            }).ToList();
 
