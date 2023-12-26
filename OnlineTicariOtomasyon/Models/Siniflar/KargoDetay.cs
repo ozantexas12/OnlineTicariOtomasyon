@@ -14,6 +14,7 @@ namespace OnlineTicariOtomasyon.Models.Siniflar
         [Column(TypeName = "Varchar")]
         [StringLength(300)]
         public string Aciklama { get; set; }
+        [Display(Name = "Takip Kodu")]
         [Column(TypeName = "Varchar")]
         [StringLength(10)]
         public string TakipKodu { get; set; } //1234223AC
