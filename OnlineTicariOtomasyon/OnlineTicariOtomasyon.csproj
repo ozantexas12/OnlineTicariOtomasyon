@@ -373,6 +373,7 @@
     <Content Include="Dist\dist\css\alt\adminlte.plugins.css" />
     <Content Include="Dist\dist\css\alt\adminlte.plugins.min.css" />
     <Content Include="Dist\dist\img\AdminLTELogo.png" />
+    <Content Include="Dist\dist\img\asds.png" />
     <Content Include="Dist\dist\img\avatar.png" />
     <Content Include="Dist\dist\img\avatar2.png" />
     <Content Include="Dist\dist\img\avatar3.png" />
@@ -426,6 +427,7 @@
     <Content Include="Dist\js\moment-2.2.1.js" />
     <Content Include="Dist\js\site.js" />
     <Content Include="Dist\js\underscore-min.js" />
+    <Content Include="Dist\PersonelGorsel\aaaa.jpg" />
     <Content Include="Dist\PersonelGorsel\person_1.jpg" />
     <Content Include="Dist\PersonelGorsel\person_2.jpg" />
     <Content Include="Dist\PersonelGorsel\person_3.jpg" />
@@ -2867,6 +2869,8 @@
     <Content Include="Views\CariPanel\YeniMesaj.cshtml" />
     <Content Include="Views\CariPanel\KargoTakip.cshtml" />
     <Content Include="Views\CariPanel\CariKargoTakip.cshtml" />
+    <Content Include="Views\CariPanel\Partia1.cshtml" />
+    <Content Include="Views\CariPanel\Partial2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

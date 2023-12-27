@@ -16,9 +16,20 @@ namespace OnlineTicariOtomasyon.Controllers
         public ActionResult Index()
         {
             var mail = User.Identity.Name;
-            var degerler = c.Carilers.FirstOrDefault(x => x.CarilerMail == mail);
+            var degerler = c.Mesajlars.Where(x => x.Alici == mail).ToList();
             ViewBag.m = mail;
-            return View();
+            var mailid=c.Carilers.Where(x=>x.CarilerMail==mail).Select(y=>y.CarilerID).FirstOrDefault();
+            ViewBag.mid = mailid;
+            var toplamsatis = c.SatisHarekets.Where(x => x.CarilerId == mailid).Count();
+            ViewBag.toplamsatis=toplamsatis;
+            var satisHareketleri = c.SatisHarekets;
+            var ToplamTutar = (satisHareketleri != null && satisHareketleri.Any(x => x.CarilerId == mailid)) ? satisHareketleri.Where(x => x.CarilerId == mailid).Sum(y => y.ToplamTutar) : 0;
+            ViewBag.ToplamTutar = ToplamTutar;
+            var ToplamUrunSayisi = (satisHareketleri != null && satisHareketleri.Any(x => x.CarilerId == mailid)) ? satisHareketleri.Where(x => x.CarilerId == mailid).Sum(y => y.Adet) : 0;
+            ViewBag.ToplamUrunSayisi = (ToplamUrunSayisi > 0) ? ToplamUrunSayisi : 0;
+            var AdSoyad = c.Carilers.Where(x => x.CarilerMail == mail).Select(y => y.CarilerAdi + " " + y.CarilerSoyadi).FirstOrDefault();
+            ViewBag.AdSoyad = AdSoyad;
+            return View(degerler);
         }
         [Authorize]
         public ActionResult Siparislerim()
@@ -101,6 +112,27 @@ namespace OnlineTicariOtomasyon.Controllers
             FormsAuthentication.SignOut();
             Session.Abandon();
             return RedirectToAction("Index","Login");
+        }
+        public PartialViewResult Partia1()
+        {
+            var mail = User.Identity.Name;
+            var id=c.Carilers.Where(x=>x.CarilerMail==mail).Select(y=>y.CarilerID).FirstOrDefault();
+            var caribul = c.Carilers.Find(id);
+            return PartialView("Partia1",caribul);
+        }
+        public PartialViewResult Partial2() 
+        {
+            var veriler=c.Mesajlars.Where(x=>x.Gonderici=="admin").ToList(); 
+            return PartialView(veriler);
+        }
+        public ActionResult CariBilgiGuncelle(Cariler s)
+        {
+            var cr = c.Carilers.Find(s.CarilerID);
+            cr.CarilerAdi = s.CarilerAdi;
+            cr.CarilerSoyadi = s.CarilerSoyadi;
+            cr.CarilerSifre = s.CarilerSifre;
+            c.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }
