@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 using OnlineTicariOtomasyon.Models.Siniflar;
 
 namespace OnlineTicariOtomasyon.Controllers
@@ -19,6 +20,7 @@ namespace OnlineTicariOtomasyon.Controllers
             ViewBag.m = mail;
             return View();
         }
+        [Authorize]
         public ActionResult Siparislerim()
         {
             string mail = User.Identity.Name;
@@ -26,6 +28,7 @@ namespace OnlineTicariOtomasyon.Controllers
             var degerler = c.SatisHarekets.Where(x => x.CarilerId == id).ToList();
             return View(degerler);
         }
+        [Authorize]
         public ActionResult GelenMesajlar()
         {
             string mail = User.Identity.Name;
@@ -36,6 +39,7 @@ namespace OnlineTicariOtomasyon.Controllers
             ViewBag.d2 = gidensayisi;
             return View(mesajlar);
         }
+        [Authorize]
         public ActionResult GidenMesajlar()
         {
             string mail = User.Identity.Name;
@@ -46,6 +50,7 @@ namespace OnlineTicariOtomasyon.Controllers
             ViewBag.d2 = gidensayisi;
             return View(mesajlar);
         }
+        [Authorize]
         public ActionResult MesajDetay(int? id)
         {
             var degerler = c.Mesajlars.Where(x => x.MesajID == id).ToList();
@@ -76,6 +81,26 @@ namespace OnlineTicariOtomasyon.Controllers
             c.SaveChanges();
             return View();
 
+        }
+        public ActionResult KargoTakip(string p)
+        {
+            var k = from x in c.KargoDetays select x;
+            if (!string.IsNullOrEmpty(p))
+            {
+                k = k.Where(y => y.TakipKodu.Contains(p));
+            }
+            return View(k.ToList());
+        }
+        public ActionResult CariKargoTakip(string id)
+        {
+            var degerler = c.KargoTakips.Where(x => x.TakipKodu == id).ToList();
+            return View(degerler);
+        }
+        public ActionResult LogOut()
+        {
+            FormsAuthentication.SignOut();
+            Session.Abandon();
+            return RedirectToAction("Index","Login");
         }
     }
 }
