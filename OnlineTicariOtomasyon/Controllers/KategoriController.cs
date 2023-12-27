@@ -13,7 +13,7 @@ namespace OnlineTicariOtomasyon.Controllers
     {
         // GET: Kategori
         Context c = new Context();
-        public ActionResult Index(int sayfa=1)
+        public ActionResult Index(int sayfa = 1)
         {
             var degerler = c.Kategoris.ToList().ToPagedList(sayfa, 4);
             return View(degerler);
@@ -48,6 +48,26 @@ namespace OnlineTicariOtomasyon.Controllers
             ktgr.KategoriAd = k.KategoriAd;
             c.SaveChanges();
             return RedirectToAction("Index");
+        }
+        public ActionResult Deneme()
+        {
+            Class3 cs = new Class3();
+            cs.Kategoriler = new SelectList(c.Kategoris, "KategoriID", "KategoriAd");
+            cs.Urunler = new SelectList(c.Uruns, "UrunId", "UrunAdi");
+            return View(cs);
+        }
+        public JsonResult UrunGetir(int p)
+        {
+            var urunlistesi = (from x in c.Uruns
+                               join y in c.Kategoris
+                               on x.Kategori.KategoriID equals y.KategoriID
+                               where x.Kategori.KategoriID == p
+                               select new
+                               {
+                                   Text = x.UrunAdi,
+                                   Value = x.UrunId.ToString()
+                               }).ToList();
+            return Json(urunlistesi,JsonRequestBehavior.AllowGet);
         }
     }
 }

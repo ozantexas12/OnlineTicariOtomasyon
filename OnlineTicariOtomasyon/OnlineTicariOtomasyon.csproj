@@ -153,6 +153,7 @@
     <Compile Include="Models\Siniflar\Admin.cs" />
     <Compile Include="Models\Siniflar\Cariler.cs" />
     <Compile Include="Models\Siniflar\Class1.cs" />
+    <Compile Include="Models\Siniflar\Class3.cs" />
     <Compile Include="Models\Siniflar\Context.cs" />
     <Compile Include="Models\Siniflar\Departman.cs" />
     <Compile Include="Models\Siniflar\Detay.cs" />
@@ -413,6 +414,7 @@
     <Content Include="Dist\dist\js\pages\dashboard.js" />
     <Content Include="Dist\dist\js\pages\dashboard2.js" />
     <Content Include="Dist\dist\js\pages\dashboard3.js" />
+    <Content Include="Dist\hata\404 - Kopya.html" />
     <Content Include="Dist\index.html" />
     <Content Include="Dist\js\bootstrap.bundle.min.js" />
     <Content Include="Dist\js\Chart1.js" />
@@ -2873,6 +2875,7 @@
     <Content Include="Views\CariPanel\Partia1.cshtml" />
     <Content Include="Views\CariPanel\Partial2.cshtml" />
     <Content Include="Views\HataSayfaları\PageError.cshtml" />
+    <Content Include="Views\Kategori\Deneme.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
