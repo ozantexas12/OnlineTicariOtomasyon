@@ -3,12 +3,10 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_CariLayout.cshtml";
 }
-
 <h2>Online Ticari Otomasyon Cari Bilgi Paneli</h2>
 
 @using (Html.BeginForm("Index2", "CariPanel", FormMethod.Post))
 {
-    @ViewBag.m
     <table class="table table-hover">
         <tr>
             <td>
@@ -16,17 +14,30 @@
             </td>
         </tr>
         <tr>
-            <td>@Html.TextBoxFor(x => x.CarilerAdi, new { @class = "form-control" })</td>
+            <td>
+                @Html.LabelFor(x => x.CarilerAdi)
+                @Html.TextBoxFor(x => x.CarilerAdi, new { @class = "form-control" })
+            </td>
         </tr>
         <tr>
-            <td>@Html.TextBoxFor(x => x.CarilerSoyadi, new { @class = "form-control" })</td>
+            <td>
+                @Html.LabelFor(x => x.CarilerSoyadi)
+                @Html.TextBoxFor(x => x.CarilerSoyadi, new { @class = "form-control" })
+            </td>
         </tr>
         <tr>
-            <td>@Html.TextBoxFor(x => x.CarilerSehir, new { @class = "form-control" })</td>
+            <td>
+                @Html.LabelFor(x => x.CarilerSehir)
+                @Html.TextBoxFor(x => x.CarilerSehir, new { @class = "form-control" })
+            </td>
         </tr>
         <tr>
-            <td>@Html.TextBoxFor(x => x.CarilerSifre, new { @class = "form-control" })</td>
+            <td>
+                @Html.LabelFor(x => x.CarilerSifre)
+                @Html.PasswordFor(x => x.CarilerSifre, new { @class = "form-control" })
+            </td>
         </tr>
     </table>
     <button class="btn btn-warning">Bilgilerimi Güncelle</button>
 }
+

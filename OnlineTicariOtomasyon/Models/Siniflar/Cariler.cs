@@ -29,7 +29,7 @@ namespace OnlineTicariOtomasyon.Models.Siniflar
         [Column(TypeName = "Varchar")]
         [StringLength(50)]
         public string CarilerMail { get; set; }
-
+        [Display(Name = "Cariler Şifre")]
         [Column(TypeName = "Varchar")]
         [StringLength(20)]
         public string CarilerSifre { get; set; }

@@ -162,6 +162,7 @@
     <Compile Include="Models\Siniflar\KargoTakip.cs" />
     <Compile Include="Models\Siniflar\Kategori.cs" />
     <Compile Include="Models\Siniflar\Marka.cs" />
+    <Compile Include="Models\Siniflar\Mesajlar.cs" />
     <Compile Include="Models\Siniflar\Personel.cs" />
     <Compile Include="Models\Siniflar\SatisHareket.cs" />
     <Compile Include="Models\Siniflar\sinif1.cs" />
@@ -348,8 +349,12 @@
     <Content Include="Content\DataTables\images\sort_desc_disabled.png" />
     <Content Include="Content\DataTables\swf\flashExport.swf" />
     <Content Include="Content\PagedList.css" />
+    <Content Include="Dist\css\adminlte.min.css" />
+    <Content Include="Dist\css\all.min.css" />
     <Content Include="Dist\css\bootstrap.css" />
     <Content Include="Dist\css\clndr.css" />
+    <Content Include="Dist\css\font-awesome.css" />
+    <Content Include="Dist\css\icheck-bootstrap.min.css" />
     <Content Include="Dist\css\jqvmap.css" />
     <Content Include="Dist\css\nav.css" />
     <Content Include="Dist\css\style.css" />
@@ -407,6 +412,7 @@
     <Content Include="Dist\dist\js\pages\dashboard2.js" />
     <Content Include="Dist\dist\js\pages\dashboard3.js" />
     <Content Include="Dist\index.html" />
+    <Content Include="Dist\js\bootstrap.bundle.min.js" />
     <Content Include="Dist\js\Chart1.js" />
     <Content Include="Dist\js\clndr.js" />
     <Content Include="Dist\js\easyResponsiveTabs.js" />
@@ -2855,6 +2861,10 @@
     <Content Include="Views\Grafik\Index1.cshtml" />
     <Content Include="Views\Grafik\Index2.cshtml" />
     <Content Include="Views\Grafik\Index3.cshtml" />
+    <Content Include="Views\CariPanel\GelenMesajlar.cshtml" />
+    <Content Include="Views\CariPanel\GidenMesajlar.cshtml" />
+    <Content Include="Views\CariPanel\MesajDetay.cshtml" />
+    <Content Include="Views\CariPanel\YeniMesaj.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
